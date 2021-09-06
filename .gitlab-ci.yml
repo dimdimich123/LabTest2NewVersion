@@ -1,6 +1,5 @@
 stages:
   - build  
-  - test
 
 build_job:
   stage: build
@@ -8,7 +7,7 @@ build_job:
     - branches
   script:
     - 'cd ConsoleApp2'
-    - '"C:\Tools\Nuget\nuget.exe" restore'
+    - '"C:\Tools\Nuget\nuget.exe" restore "ConsoleApp2.sln"'
     - '"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" ConsoleApp2.sln'  
   artifacts:
     paths:
