@@ -1,5 +1,6 @@
 before_script:
   - CHCP 65001
+  - 'C:\Tools\Nuget\nuget.exe restore'
 
 stages:
   - build  
@@ -10,8 +11,7 @@ build_job:
     - branches
   script:
     - 'cd ConsoleApp2'
-    - 'C:\Tools\Nuget\nuget.exe restore'
-    - '"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" ConsoleApp2.sln'  
+    - '"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" "ConsoleApp2.sln"'  
   artifacts:
     paths:
       - 'ConsoleApp2\ConsoleApp2\bin\Debug\ConsoleApp2.exe'
