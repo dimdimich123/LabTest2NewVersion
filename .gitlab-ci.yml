@@ -1,3 +1,6 @@
+before_script:
+  - CHCP 65001
+
 stages:
   - build  
 
